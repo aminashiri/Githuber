@@ -1,0 +1,500 @@
+.form-title {
+    width: 100%;
+    clear:both;
+    font-family: $sans;
+    font-size: 28px;
+    color: $color-grey;
+    letter-spacing: 0;
+    line-height: 80px;
+    font-weight: $font-weight-regular;
+  }
+
+
+// Form
+.form {
+    width: 100%;
+
+    // Label
+    &--label {
+        font-weight: $font-weight-semi-bold;
+        font-size: 1.2rem;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    // Input
+    &--input {
+        
+        width: 100%;
+        max-width: 650px;
+        transition: border-color 0.25s ease-in-out;
+        font-size: 18px;
+        color: $color-grey-bright;
+        font-weight: 100;
+        border: 0;
+        background: none;
+        border-bottom: 1px solid $color-light;
+        height: 45px;
+
+        &:focus {
+            border-color: $color-pink;
+        }
+    }
+
+    &--btn {
+        font-weight: $font-weight-regular;
+        font-size: 15px;
+        color: $color-white;
+        text-transform: uppercase;
+        width: 100%;
+        height: 44px;
+        border-radius: 6px;
+        background-color: $color-pink;
+        cursor: pointer;
+        height: 45px;
+        margin-left: 20px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 8px;
+        -webkit-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: center;
+        border: 0;
+
+        &:hover,
+        &:focus {
+            color: $color-white; 
+            background-color: #3699ff;
+        }
+    }
+}
+
+
+// Panel
+.panel {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    background-color: $color-white;
+    border-bottom: 1px dashed rgba(148, 148, 148, 0.4);
+    transition: all 0.25s ease;
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    // Heading
+    &--heading {
+        font-weight: $font-weight-bold;
+        font-size: 2rem;
+    }
+
+    // Subheading
+    &--subheading {
+        font-weight: $font-weight-semi-bold;
+        font-size: 1.1rem;
+        color: $color-pink;
+        margin-top: 5px;
+    }
+
+    // Icon
+    &--icon {
+        margin-right: 10px;
+    }
+
+    // Back button
+    &--back {
+        font-weight: $font-weight-semi-bold;
+        font-size: 1.2rem;
+        color: $color-white;
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 15px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        background-color: $color-pink;
+        border-radius: 6px;
+        transition: color 0.25s ease, background-color 0.25s ease;;
+
+        &:hover,
+        &:focus {
+            color: $color-grey;
+            background-color: $color-grey-bright;
+        }
+    }
+
+    // Title
+    &--title {
+        font-weight: $font-weight-bold;
+        font-size: 1.8rem;
+        line-height: 15px;
+       
+    }
+
+     // Title
+     &--lang {
+        font-weight: $font-weight-regular;
+        font-size: 16px;
+      
+    }
+
+    // Content
+    &--content {  
+        font-size: 20px;
+        color: $color-grey;
+        margin-bottom: 0;
+        font-weight: $font-weight-normal;
+        margin-top:0px;
+    }
+
+    // Meta
+    &--meta {
+        font-size: 14px;
+        color: $color-grey-bright;
+        line-height: 25px;
+        font-weight:  $font-weight-normal;
+        display: inline-block;
+
+        .meta {
+            // Item
+            &--item {
+                font-weight: $font-weight-semi-bold;
+                display: block;
+            }
+            
+            // Icon
+            &--icon {
+                font-size: 1.2rem;
+                color: $color-pink;
+                margin-right: 6px;
+            }
+
+            // Button
+            &--btn {
+                padding: 8px;
+                background-color: $color-white;
+                border: 1px solid $color-grey-bright;
+                border-radius: 5px;
+                border-bottom-width: 3px;
+                display: block;
+                transition: background-color 0.2s ease;
+
+                &:hover,
+                &:focus {
+                    background-color: $color-grey-bright;
+                }
+            }
+
+            // Author name
+            &--author {
+                @extend .meta--item;
+
+                font-weight: $font-weight-regular;
+                font-size: 1.1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // Link
+    &--link {
+        transition: color 0.25s ease;
+        position: relative;
+        
+        &::after {
+            content: 'Go to Github';
+            left: 100%;
+
+            @extend .tooltip;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-pink;
+        }
+    }
+
+
+}
+
+// languages panel
+.languages {
+    margin: 0;
+
+    // Title
+    &--title {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    // Meta
+    &--meta {
+        color: $color-grey;
+        margin-top: 10px;
+    }
+}
+
+// Loading panel
+.loading {
+    border-bottom: 0;
+    padding-top:20px;
+    padding-bottom:20px;
+    display: flex;
+    justify-content: center;
+    color:$color-pink;
+
+    // Title
+    &--title {
+        margin: 0;
+    }
+}
+
+
+.user {
+   
+
+    // Header
+    &--header {
+        width: 140px;
+        margin: 0 auto 20px auto;
+        position: relative;
+    }
+
+    // Avatar
+    &--avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        max-width: 100%;
+    }
+
+    // Github link
+    &--github-link {
+        font-size: 2rem;
+        color: $color-grey;
+        width: 50px;
+        height: 50px;
+        background-color: $color-white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+
+        &::after {
+            content: 'Go to Github profile';
+            left: 50px;
+            
+            @extend .tooltip;
+        }
+    }
+
+    // List
+    &--list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        .list {
+            // List item
+            &--item {
+                width: 100%;
+                border-radius: 5px;
+                margin: 4px;
+                padding: 8px 12px;
+                background-color: $color-white;
+            }
+
+            // Value
+            &--value {
+                font-weight: $font-weight-bold;
+                font-size: 1.8rem;
+                color: $color-grey;
+                text-align: center;
+                display: block;
+            }
+
+            // Description
+            &--desc {
+                font-size: 1.1rem;
+                color: $color-grey;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+
+    // User data
+    &--data {
+        padding-top: 20px;
+
+        .data {
+            // Item
+            &--item {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            // Description
+            &--desc {
+                font-size: 1.1rem;
+                color: $color-grey;
+                display: block;
+                margin-bottom: 6px;
+            }
+
+            // Value
+            &--value {
+                font-weight: $font-weight-bold;
+                font-size: 1.4rem;
+                color: $color-grey;
+                display: block;
+            }
+        }
+    }
+}
+
+// Tooltip
+.tooltip {
+    font-size: 0.8rem;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    background-color: $color-grey;
+    opacity: 0;
+    visibility: hidden;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+    position: absolute;
+
+    &:hover,
+    &:focus {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d(10px, -50%, 0);
+        }
+    }
+}
+
+// Footer
+.footer {
+    // Text
+    &--text {
+        font-size: 1.1rem;
+        color: $color-grey;
+    }
+}
+footer p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.i-footer{
+    width: 4px;
+    height: 4px;
+    background-color: #0c2d4e;
+    border-radius: 100px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin: 0 7px;
+}
+
+.result-title {
+    font-family: $sans;
+    font-size: 20px;
+    color: $color-grey;
+    letter-spacing: 0;
+    line-height: 60px;
+    margin-top: 30px;
+  }
+
+.repo-title{
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #434346;
+    letter-spacing: 0;
+    line-height: 60px;
+    margin-top: 50px;
+    margin-bottom:35px;
+    font-weight: $font-weight-semi-bold;
+}
+.result-title a{
+    line-height: 100px;
+    
+}
+.result-subtitle {
+    font-family: $sans;
+    font-size: 16px;
+    color: $color-grey-bright;
+    letter-spacing: 0;
+    width: 100%;
+    display: block;
+    line-height: 5px;
+    font-weight: $font-weight-normal;
+}
+
+.floatRight{
+    
+    
+    color:$color-grey-bright;
+    font-size:20px;
+}
+
+
+span {
+    color: #666;
+    font-size: 18px;
+    display: inline;
+    bottom: 10px;
+    width: 100%;
+    top: 45%;
+    bottom: auto;
+    right: auto;
+    
+    text-align: left;
+  }
+  span a {
+    color: #000000;
+    text-decoration: none;
+  }
+  span .fa {
+    color: #E90606;
+    margin: 0 3px;
+    font-size: 10px;
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+  }
+  
+
+
+@keyframes pound {
+	from { transform: none; }
+	50% { transform: scale(1.1); }
+	to { transform: none; }
+}
+
+.footer-icon-heart {
+	display: inline-block;
+	animation: pound .5s infinite;
+	transform-origin: center;
+}

@@ -1,0 +1,47 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Html
+html {
+   
+}
+
+// Body
+body {
+    font-size:19px;
+    font-family:$sans;
+    color: $color-grey;
+    background-color: $color-base;
+    margin: 0;
+    padding: 0;
+}
+
+// Hyperlink
+a {
+    color: $color-pink;
+    text-decoration: none;
+}
+
+// List
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+// Headings
+h1,
+h2,
+h3 {
+    margin: 0;
+}
